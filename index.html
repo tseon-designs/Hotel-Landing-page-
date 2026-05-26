@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Liya Hotel — The Art of Living</title>
+<meta name="description" content="Experience profound serenity at Liya Hotel. Luxury suites, Michelin dining, Lumière Spa, and personalized service await you. Book your sanctuary today.">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-primary-fixed-variant": "#38485a",
+          "primary-container": "#1a2b3c",
+          "secondary-fixed": "#efe0cd",
+          "tertiary-fixed-dim": "#e9c349",
+          "on-primary-fixed": "#0b1d2d",
+          "on-surface-variant": "#44474c",
+          "on-secondary": "#ffffff",
+          "secondary-container": "#efe0cd",
+          "on-primary": "#ffffff",
+          "inverse-primary": "#b7c8de",
+          "primary-fixed-dim": "#b7c8de",
+          "on-secondary-fixed-variant": "#4f4538",
+          "background": "#f9f9f9",
+          "secondary-fixed-dim": "#d2c4b2",
+          "surface-container-highest": "#e2e2e2",
+          "surface-tint": "#4f6073",
+          "on-surface": "#1a1c1c",
+          "surface-bright": "#f9f9f9",
+          "inverse-surface": "#2f3131",
+          "surface-container": "#eeeeee",
+          "primary": "#041627",
+          "on-tertiary-fixed": "#241a00",
+          "on-error": "#ffffff",
+          "outline-variant": "#c4c6cd",
+          "surface-variant": "#e2e2e2",
+          "on-tertiary-container": "#4f3e00",
+          "outline": "#74777d",
+          "error-container": "#ffdad6",
+          "on-secondary-fixed": "#221a0f",
+          "surface": "#f9f9f9",
+          "inverse-on-surface": "#f0f1f1",
+          "on-secondary-container": "#6d6354",
+          "on-primary-container": "#8192a7",
+          "on-error-container": "#93000a",
+          "surface-container-low": "#f3f3f4",
+          "on-background": "#1a1c1c",
+          "primary-fixed": "#d2e4fb",
+          "surface-container-high": "#e8e8e8",
+          "error": "#ba1a1a",
+          "on-tertiary-fixed-variant": "#574500",
+          "surface-container-lowest": "#ffffff",
+          "tertiary": "#735c00",
+          "on-tertiary": "#ffffff",
+          "tertiary-fixed": "#ffe088",
+          "secondary": "#675d4e",
+          "surface-dim": "#dadada",
+          "tertiary-container": "#cca830"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter": "32px",
+          "margin-mobile": "24px",
+          "unit": "8px",
+          "margin-desktop": "64px",
+          "section-gap": "120px",
+          "container-max": "1280px"
+        },
+        "fontFamily": {
+          "display-lg": ["Playfair Display"],
+          "label-lg": ["Montserrat"],
+          "body-md": ["Montserrat"],
+          "headline-md": ["Playfair Display"],
+          "body-lg": ["Montserrat"],
+          "label-md": ["Montserrat"],
+          "headline-lg": ["Playfair Display"],
+          "display-lg-mobile": ["Playfair Display"]
+        },
+        "fontSize": {
+          "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+          "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+          "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+          "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+          "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "300"}],
+          "label-md": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+          "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+          "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400"}]
+        }
+      },
+    },
+  }
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  }
+  .text-glow {
+    text-shadow: 0 0 20px rgba(239, 224, 205, 0.3);
+  }
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  body {
+    min-height: max(884px, 100dvh);
+  }
+  /* Clickable contact links */
+  .contact-link {
+    transition: color 0.2s ease, opacity 0.2s ease;
+  }
+  .contact-link:hover {
+    opacity: 0.8;
+  }
+</style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-fixed selection:text-primary overflow-x-hidden">
+
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 backdrop-blur-md shadow-sm bg-surface/90">
+  <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-unit max-w-container-max mx-auto">
+    <div class="flex items-center gap-4">
+      <span class="material-symbols-outlined text-primary text-2xl" data-icon="menu">menu</span>
+    </div>
+    <div class="font-display-lg text-headline-md tracking-widest text-primary">Liya Hotel</div>
+    <button id="book-now-nav" class="bg-primary text-secondary-fixed font-label-lg text-label-md px-4 py-2 hover:opacity-90 transition-all active:scale-95">BOOK NOW</button>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+  <div class="absolute inset-0 z-0">
+    <img
+      alt="Luxury Suite at Dusk"
+      class="w-full h-full object-cover"
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAugbUtblYSMd3XtZBl24dLqqm2H7iF960n7JAzRgoDadt6L1AcNj3focZxF3Fko9-oQ-ddYBaTErhTIqx2CMpHZYEBEHzyIa3JteNtN5lAwmtYGp9tWgyf_9q54vpwFnFSAC6ZlA0amPBjp1YQbDG8uvNDbwnKKoombrj3QlxZ02hE_CSPhf3lCyMiWN5nMs6MvJ3Z6YSzCDBd0E7NaCHVFn3Pc0ersjW7gu7wb-Fy3KQBvGaFtfcCVJtf33C_dj8Q5m0D0ObAaw"
+    >
+    <div class="absolute inset-0 bg-primary/30"></div>
+  </div>
+  <div class="relative z-10 text-center px-margin-mobile flex flex-col items-center">
+    <h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-secondary-fixed mb-8 text-glow">
+      The Art of Living
+    </h1>
+    <!-- Availability Widget -->
+    <div class="bg-white/10 backdrop-blur-xl border border-white/20 p-6 w-full max-w-md shadow-2xl">
+      <div class="grid grid-cols-2 gap-4 mb-4">
+        <div class="text-left">
+          <p class="font-label-md text-label-md text-secondary-fixed/80 uppercase">Arrival</p>
+          <p class="font-body-md text-body-md text-white border-b border-secondary-fixed/30 pb-1">12 Oct 2024</p>
+        </div>
+        <div class="text-left">
+          <p class="font-label-md text-label-md text-secondary-fixed/80 uppercase">Departure</p>
+          <p class="font-body-md text-body-md text-white border-b border-secondary-fixed/30 pb-1">15 Oct 2024</p>
+        </div>
+      </div>
+      <button id="check-availability-btn" class="w-full bg-secondary-fixed text-primary font-label-lg text-label-lg py-4 tracking-widest hover:bg-secondary-fixed-dim transition-colors duration-500">
+        CHECK AVAILABILITY
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- About Section -->
+<section class="py-section-gap px-margin-mobile max-w-2xl mx-auto text-center">
+  <span class="font-label-md text-label-md text-tertiary tracking-[0.3em] uppercase mb-6 block">The Liya Experience</span>
+  <h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary mb-8 italic">Where light meets luxury.</h2>
+  <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">At Liya Hotel, we believe that luxury is not just a status, but a feeling of profound serenity. Our spaces are meticulously crafted to dance with natural light, creating an ever-shifting atmosphere of calm. From the moment you arrive, our personalized service ensures that your every desire is met with unhurried grace and absolute discretion.</p>
+</section>
+
+<!-- Featured Rooms -->
+<section class="pb-section-gap px-margin-mobile">
+  <div class="max-w-container-max mx-auto">
+    <h3 class="font-headline-md text-headline-md text-primary mb-12 text-center">Private Residencies</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+
+      <!-- Room 1 -->
+      <div class="group cursor-pointer">
+        <div class="aspect-[3/4] overflow-hidden mb-6 shadow-[0_8px_24px_rgba(26,43,60,0.04)]">
+          <img
+            alt="Studio Suite"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8QDQB5eL2rzj7auwY8aXv1A0-3Ul__RI9BuY1dhjDqftol3bzxitvBpX9Fdx6xh-OiisqCIKUu7lwLhak0ksTbhHQ63LI8UIBVfv8zRlb7Jq_lYEcXmxiEVefXob2gkebn3KhURPyRO4SNhSzckwXeM02qRroCPcm6dq4fRA4gVe_R4A1im5DOoMVw_kWSednj5kSqAWtojg0hriE2GblvgR7tQEVvdHVA6aVVeosSeSy0Xvh4K0CDSoKBKwcWbHDDS2mCD3Y1A"
+          >
+        </div>
+        <div class="flex justify-between items-end mb-4">
+          <div>
+            <h4 class="font-headline-md text-headline-md text-primary">Studio Suite</h4>
+            <p class="font-label-md text-label-md text-on-surface-variant">FROM $450 / NIGHT</p>
+          </div>
+        </div>
+        <button class="font-label-lg text-label-lg text-primary border-b border-tertiary pb-1 group-hover:text-tertiary transition-colors">VIEW DETAILS</button>
+      </div>
+
+      <!-- Room 2 -->
+      <div class="group cursor-pointer md:mt-16">
+        <div class="aspect-[3/4] overflow-hidden mb-6 shadow-[0_8px_24px_rgba(26,43,60,0.04)]">
+          <img
+            alt="Garden View"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiRXb2JXTeGGRYx-A9VOwY4EY1G_YeZExVkhPM8313O5m-p6tZZXl-Z-guRWon8mKHbpBaJ7AXJaOkJGtWs5_kj0u-XCfMzNueQoVXy7fiUl4BQUmlfBUsy6rQeKmOP8okjfioS1AZ5jQZHbDL0v4zS4cYuWKBk4CVGEmG9FPLDTDZd0LyY5VCArXguYYk7VuRe4DNJPZP7OMypKNpZDjK33C79i5h1HRFg_zNJ5s8ajlQo8Zy-GMVF2EzSfZzOdJjRY8i_Y_X6g"
+          >
+        </div>
+        <div class="flex justify-between items-end mb-4">
+          <div>
+            <h4 class="font-headline-md text-headline-md text-primary">Garden View</h4>
+            <p class="font-label-md text-label-md text-on-surface-variant">FROM $680 / NIGHT</p>
+          </div>
+        </div>
+        <button class="font-label-lg text-label-lg text-primary border-b border-tertiary pb-1 group-hover:text-tertiary transition-colors">VIEW DETAILS</button>
+      </div>
+
+      <!-- Room 3 -->
+      <div class="group cursor-pointer">
+        <div class="aspect-[3/4] overflow-hidden mb-6 shadow-[0_8px_24px_rgba(26,43,60,0.04)]">
+          <img
+            alt="Presidential Suite"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3Ix0h-udyklM7oRpDeTQfAWbkkHUkx8nuhfAaJpjw6781Ly9zaSfqAy3omnKE2yQ1Qre4oLhG-QYukLJFekQvqriRIrI2sXT4bvtGBQy9fSStmNE3vkOh8Oa4NruMunry_pHNiYjBJNKqICDOYTOKXYMENevuyk4fYYnvGR8DfEk8mYetlXV_8HHxx3wGC47GT8xAm6dvj-wll6gWPXMfp6kQyFeEEisdF9hfXgyrNnZT1l9sY5Ejs3VoDLwt7GKNLKuhTvekVw"
+          >
+        </div>
+        <div class="flex justify-between items-end mb-4">
+          <div>
+            <h4 class="font-headline-md text-headline-md text-primary">Presidential</h4>
+            <p class="font-label-md text-label-md text-on-surface-variant">FROM $1,200 / NIGHT</p>
+          </div>
+        </div>
+        <button class="font-label-lg text-label-lg text-primary border-b border-tertiary pb-1 group-hover:text-tertiary transition-colors">VIEW DETAILS</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Amenities Grid -->
+<section class="bg-primary py-section-gap text-secondary-fixed">
+  <div class="max-w-container-max mx-auto px-margin-mobile text-center">
+    <h3 class="font-headline-lg-mobile text-headline-lg-mobile mb-16 tracking-tight">The Essentials of Indulgence</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div class="flex flex-col items-center">
+        <span class="material-symbols-outlined text-5xl mb-6 text-tertiary-fixed" data-icon="pool">pool</span>
+        <h5 class="font-label-lg text-label-lg mb-2">INFINITY POOL</h5>
+        <p class="font-body-md text-body-md text-secondary-fixed/70">A heated sanctuary overlooking the horizon.</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <span class="material-symbols-outlined text-5xl mb-6 text-tertiary-fixed" data-icon="restaurant">restaurant</span>
+        <h5 class="font-label-lg text-label-lg mb-2">MICHELIN DINING</h5>
+        <p class="font-body-md text-body-md text-secondary-fixed/70">Curated gastronomy for the discerning palate.</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <span class="material-symbols-outlined text-5xl mb-6 text-tertiary-fixed" data-icon="spa">spa</span>
+        <h5 class="font-label-lg text-label-lg mb-2">LUMIÈRE SPA</h5>
+        <p class="font-body-md text-body-md text-secondary-fixed/70">Holistic rituals for mind, body, and soul.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Social Proof -->
+<section class="py-section-gap px-margin-mobile bg-white">
+  <div class="max-w-3xl mx-auto text-center">
+    <span class="material-symbols-outlined text-tertiary text-4xl mb-8" data-icon="format_quote" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+    <blockquote class="font-display-lg-mobile text-headline-lg-mobile italic text-primary leading-tight mb-8">
+      "An oasis of profound stillness in the heart of the city. Every detail at Lumière whispers elegance and care."
+    </blockquote>
+    <cite class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-widest">— Julianne Vance, Editor of 'The Modern Nomad'</cite>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="relative h-[530px] flex items-center justify-center overflow-hidden">
+  <div class="absolute inset-0 z-0">
+    <img
+      alt="Hotel Exterior"
+      class="w-full h-full object-cover"
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU4fkRKQmwB20_7Kbvv_kY0selNn0ABXLyqyMZBjWovZcCgqhnSDDD5PtyNL-VWdXCNFwyjNrkHF6rQ583_X8FziTR3iKNUr8lgZVaMjGTc8szQPd4ONV3G4bFpOGaGkgeQM6jsyn1C7Rc1fpLL7FxLNnEn6d1-V5OHoBzw-YGF2vm9hPkxZW9CLs1qn0gjC0S2x6SizEopKM3RoM5wHIslkLKx9rvH6VpYyrafAzreiUZa4E2SuHLD3WbYz_ci_gtQ7JH421pIg"
+    >
+    <div class="absolute inset-0 bg-primary/40 backdrop-grayscale-[0.2]"></div>
+  </div>
+  <div class="relative z-10 text-center px-margin-mobile">
+    <h2 class="font-headline-lg text-white mb-8">Your sanctuary awaits.</h2>
+    <button id="book-your-stay-btn" class="bg-secondary-fixed text-primary font-label-lg text-label-lg px-12 py-5 tracking-[0.2em] shadow-xl hover:translate-y-[-2px] transition-all duration-300">
+      BOOK YOUR STAY
+    </button>
+  </div>
+</section>
+
+<!-- Contact / Get in Touch -->
+<section class="bg-primary py-section-gap text-secondary-fixed">
+  <div class="max-w-container-max mx-auto px-margin-mobile text-center">
+    <h3 class="font-headline-lg-mobile text-headline-lg-mobile mb-12 tracking-tight">Get in Touch</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-2xl mx-auto">
+
+      <!-- Phone -->
+      <div class="flex flex-col items-center">
+        <span class="material-symbols-outlined text-5xl mb-6 text-tertiary-fixed" data-icon="call">call</span>
+        <h5 class="font-label-lg text-label-lg mb-4">PHONE</h5>
+        <a
+          href="tel:0911433459"
+          id="phone-link-1"
+          class="contact-link font-body-md text-body-md text-secondary-fixed/70 hover:text-tertiary-fixed block mb-2"
+          aria-label="Call us at 0911433459"
+        >0911433459</a>
+        <a
+          href="tel:0936660671"
+          id="phone-link-2"
+          class="contact-link font-body-md text-body-md text-secondary-fixed/70 hover:text-tertiary-fixed block"
+          aria-label="Call us at 0936660671"
+        >0936660671</a>
+      </div>
+
+      <!-- Email -->
+      <div class="flex flex-col items-center">
+        <span class="material-symbols-outlined text-5xl mb-6 text-tertiary-fixed" data-icon="mail">mail</span>
+        <h5 class="font-label-lg text-label-lg mb-4">EMAIL</h5>
+        <a
+          href="mailto:liya.thotel@gmail.com?subject=Reservation%20Inquiry%20%E2%80%94%20Liya%20Hotel&body=Hello%20Liya%20Hotel%20Team%2C%0A%0AI%20would%20like%20to%20inquire%20about%20a%20reservation.%20Please%20find%20my%20details%20below%3A%0A%0AName%3A%20%0ACheck-in%20Date%3A%20%0ACheck-out%20Date%3A%20%0ANumber%20of%20Guests%3A%20%0ARoom%20Type%20Preference%3A%20%0ASpecial%20Requests%3A%20%0A%0AThank%20you%2C%0A"
+          id="email-link"
+          class="contact-link font-body-md text-body-md text-secondary-fixed/70 hover:text-tertiary-fixed block"
+          aria-label="Email us at liya.thotel@gmail.com"
+        >liya.thotel@gmail.com</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-primary text-secondary-fixed w-full pt-section-gap pb-8 border-t border-tertiary/20">
+  <div class="flex flex-col md:flex-row justify-between items-start px-margin-mobile md:px-margin-desktop gap-gutter max-w-container-max mx-auto">
+    <div class="mb-12 md:mb-0">
+      <div class="font-display-lg text-headline-md text-secondary-fixed mb-6">Liya Hotel</div>
+      <p class="font-body-md text-body-md text-secondary-fixed/60 max-w-xs leading-relaxed">Defining the future of luxury through light, design, and personalized service.</p>
+    </div>
+    <div class="grid grid-cols-2 gap-12">
+      <div class="flex flex-col gap-4">
+        <a class="font-label-md text-label-md text-secondary-fixed/70 hover:text-tertiary-fixed transition-colors duration-200" href="#">ROOMS</a>
+        <a class="font-label-md text-label-md text-secondary-fixed/70 hover:text-tertiary-fixed transition-colors duration-200" href="#">SPA</a>
+        <a class="font-label-md text-label-md text-secondary-fixed/70 hover:text-tertiary-fixed transition-colors duration-200" href="#">DINING</a>
+      </div>
+      <div class="flex flex-col gap-4">
+        <a class="font-label-md text-label-md text-secondary-fixed/70 hover:text-tertiary-fixed transition-colors duration-200" href="#">CONTACT</a>
+        <a class="font-label-md text-label-md text-secondary-fixed/70 hover:text-tertiary-fixed transition-colors duration-200" href="#">PRIVACY</a>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-container-max mx-auto px-margin-mobile mt-16 pt-8 border-t border-secondary-fixed/10">
+    <p class="font-label-md text-label-md text-secondary-fixed/40 text-center md:text-left">© 2024 LIYA HOTEL. ALL RIGHTS RESERVED.</p>
+  </div>
+</footer>
+
+<script>
+  // Simple scroll interaction for the TopAppBar
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 50) {
+      nav.classList.add('py-2');
+      nav.classList.remove('py-unit');
+    } else {
+      nav.classList.remove('py-2');
+      nav.classList.add('py-unit');
+    }
+  });
+
+  // Atmospheric fade-in for sections on scroll
+  const observerOptions = { threshold: 0.1 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('opacity-100', 'translate-y-0');
+        entry.target.classList.remove('opacity-0', 'translate-y-10');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section').forEach(section => {
+    section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+    observer.observe(section);
+  });
+</script>
+
+</body>
+</html>
